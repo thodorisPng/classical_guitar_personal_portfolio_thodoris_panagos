@@ -9,7 +9,7 @@
     
      
      {
-      "title": "Το βαλς των χαμένων ονείρων - Μάνος Χατζιδάκις",
+      "title": "Το βαλς των χαμενων ονειρων - Μανος Χατζιδακις",
       "searchTags": "το βαλς των χαμενων ονειρων μανος χατζιδακις waltz of lost dreams",
       "embedUrl": "https://www.youtube.com/embed/gfHh2lvIs2A"
     },
@@ -47,6 +47,15 @@
       "embedUrl": "https://www.youtube.com/embed/suIaQ9eh_R8",
       "type": "Original Composition"
     },
+
+
+  {
+      "title": "Cello Suite 2 (complete) -J.S.Bach",
+      "searchTags": "classical guitar cover",
+      "embedUrl": "https://www.youtube.com/embed/6bJB1rxjsAs"
+    },
+
+
     {
       "title": "A Beautiful Day No. 1",
       "searchTags": "a beautiful day no 1 classical guitar composition original",
@@ -91,7 +100,7 @@
     },
    
     {
-      "title": "Αθανασία - Μάνος Χατζιδάκις",
+      "title": "Αθανασια - Μανος Χατζιδακις",
       "searchTags": "αθανασια μανος χατζιδακις athanasia",
       "embedUrl": "https://www.youtube.com/embed/MCGX-EPqS60"
     },
@@ -101,22 +110,12 @@
       "embedUrl": "https://www.youtube.com/embed/__eO91Y2cE0"
     },
     {
-      "title": "[Title for Composition 1]",
+      "title": "duel in the middle of nowhere",
       "searchTags": "classical guitar composition original",
       "embedUrl": "https://www.youtube.com/embed/ywc6F8_SUbA",
       "type": "Original Composition"
-    },
-    {
-      "title": "[Title for Cover]",
-      "searchTags": "classical guitar cover",
-      "embedUrl": "https://www.youtube.com/embed/6bJB1rxjsAs"
-    },
-    {
-      "title": "[Title for Composition 2]",
-      "searchTags": "classical guitar composition original",
-      "embedUrl": "https://www.youtube.com/embed/b8KaQWSTyPI",
-      "type": "Original Composition"
     }
+  
   ],
 "scores": [
     {
