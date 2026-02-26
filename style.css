@@ -14,6 +14,28 @@
     --transition-slide: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+
+
+/* --- LEVEL 2: SCROLL PROGRESS BAR --- */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--accent);
+    z-index: 100002; /* Above everything */
+    box-shadow: 0 0 10px rgba(201, 160, 80, 0.5);
+    transition: width 0.1s ease;
+}
+
+/* --- LEVEL 3: CUSTOM CURSOR --- */
+/* Custom Cursor Removed - Reverting to Default */
+body {
+    cursor: auto;
+}
+
+
 * { 
     margin: 0; 
     padding: 0; 
@@ -1030,4 +1052,110 @@ body {
     .hero-description { font-size: 1.1rem; padding: 0 10px; }
     .scroll-indicator { bottom: 20px; }
 }
+
+
+
+/* --- LEVEL 5: THEATER MODE --- */
+.theater-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100005; /* Above everything else */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    animation: fadeIn 0.4s ease;
+}
+
+.theater-content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#theater-video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#theater-video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.theater-info {
+    text-align: left;
+    border-left: 2px solid var(--accent);
+    padding-left: 20px;
+}
+
+#theater-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--accent);
+    font-style: italic;
+}
+
+#theater-details {
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.close-theater {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-theater:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+/* Add a theater button to the cards */
+.theater-trigger {
+    margin-top: 15px;
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.theater-trigger:hover {
+    border-bottom-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .theater-overlay { padding: 20px; }
+    #theater-title { font-size: 1.5rem; }
+    .close-theater { right: 20px; top: 10px; }
+}
+
+
+
+
 

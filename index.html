@@ -14,8 +14,10 @@
 </head>
 <body>
 
-    <header class="navbar" id="main-nav">
-        <div class="logo">
+ <body>
+    <div id="scroll-progress"></div>
+
+    <header class="navbar" id="main-nav">
             <a href="index.html" class="artist-name-link">PANAGOS THEODOROS</a>
         </div>
 
@@ -168,6 +170,17 @@
             </div>
         </footer>
     </main>
+
+   <div id="theater-overlay" class="theater-overlay">
+        <span class="close-theater">&times;</span>
+        <div class="theater-content">
+            <div id="theater-video-container"></div>
+            <div class="theater-info">
+                <h3 id="theater-title"></h3>
+                <p id="theater-details"></p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
