@@ -1,0 +1,116 @@
+{
+  "videos": [
+    {
+      "title": "Looking at the Fog",
+      "searchTags": "looking at the fog classical guitar composition original",
+      "embedUrl": "https://www.youtube.com/embed/IZk9yEY_OSc",
+      "type": "Original Composition"
+    },
+    {
+      "title": "Loveless (Tremolo No. 1)",
+      "searchTags": "loveless tremolo no 1 classical guitar composition original",
+      "embedUrl": "https://www.youtube.com/embed/bnJy01ncuxk",
+      "type": "Original Composition"
+    },
+    {
+      "title": "The Vanity of Everything (Tremolo No. 2)",
+      "searchTags": "the vanity of everything tremolo no 2 classical guitar composition original",
+      "embedUrl": "https://www.youtube.com/embed/HDevrZuVOGs",
+      "type": "Original Composition"
+    },
+    {
+      "title": "Feeling of Melancholy (Tremolo No. 4)",
+      "searchTags": "feeling of melancholy tremolo no 4 classical guitar composition original",
+      "embedUrl": "https://www.youtube.com/embed/suIaQ9eh_R8",
+      "type": "Original Composition"
+    },
+    {
+      "title": "A Beautiful Day No. 1",
+      "searchTags": "a beautiful day no 1 classical guitar composition original",
+      "embedUrl": "https://www.youtube.com/embed/qvk-FlVsa5s",
+      "type": "Original Composition"
+    },
+    {
+      "title": "Piece 11",
+      "searchTags": "piece 11 classical guitar composition panagos theodoros original",
+      "embedUrl": "https://www.youtube.com/embed/kWazREHd8b8",
+      "type": "Original Composition"
+    },
+    {
+      "title": "Cavatina (theme from Deer Hunter) — Stanley Myers",
+      "searchTags": "cavatina deer hunter stanley myers john williams",
+      "embedUrl": "https://www.youtube.com/embed/20yeGEmZnOA"
+    },
+    {
+      "title": "Una Limosna Por El Amor De Dios - Agustin Barrios",
+      "searchTags": "una limosna por el amor de dios agustin barrios",
+      "embedUrl": "https://www.youtube.com/embed/03xB22fp5So"
+    },
+    {
+      "title": "Cullare la Tempesta - Scott Ouellette",
+      "searchTags": "cullare la tempesta scott ouellette",
+      "embedUrl": "https://www.youtube.com/embed/Ba9AbkQ_7IE"
+    },
+    {
+      "title": "Danza Brazilera - Jorge Morel",
+      "searchTags": "danza brazilera jorge morel",
+      "embedUrl": "https://www.youtube.com/embed/9xatGMuvzSk"
+    },
+    {
+      "title": "Por Una Cabeza - Carlos Gardel",
+      "searchTags": "por una cabeza carlos gardel tango",
+      "embedUrl": "https://www.youtube.com/embed/Tlx4E7RCeUM"
+    },
+    {
+      "title": "Milonga del Angel - Astor Piazzolla",
+      "searchTags": "milonga del angel astor piazzolla",
+      "embedUrl": "https://www.youtube.com/embed/pY4DKyA7OCQ"
+    },
+    {
+      "title": "Το βαλς των χαμένων ονείρων - Μάνος Χατζιδάκις",
+      "searchTags": "το βαλς των χαμενων ονειρων μανος χατζιδακις waltz of lost dreams",
+      "embedUrl": "https://www.youtube.com/embed/gfHh2lvIs2A"
+    },
+    {
+      "title": "Αθανασία - Μάνος Χατζιδάκις",
+      "searchTags": "αθανασια μανος χατζιδακις athanasia",
+      "embedUrl": "https://www.youtube.com/embed/MCGX-EPqS60"
+    },
+    {
+      "title": "Chaconne - J.S. Bach (BWV 1004)",
+      "searchTags": "chaconne bach violin partita no 2 d minor bwv 1004",
+      "embedUrl": "https://www.youtube.com/embed/__eO91Y2cE0"
+    },
+    {
+      "title": "[Title for Composition 1]",
+      "searchTags": "classical guitar composition original",
+      "embedUrl": "https://www.youtube.com/embed/ywc6F8_SUbA",
+      "type": "Original Composition"
+    },
+    {
+      "title": "[Title for Cover]",
+      "searchTags": "classical guitar cover",
+      "embedUrl": "https://www.youtube.com/embed/6bJB1rxjsAs"
+    },
+    {
+      "title": "[Title for Composition 2]",
+      "searchTags": "classical guitar composition original",
+      "embedUrl": "https://www.youtube.com/embed/b8KaQWSTyPI",
+      "type": "Original Composition"
+    }
+  ],
+"scores": [
+    {
+      "title": "Looking at the Fog",
+      "type": "Original Composition",
+      "notationType": "Tablature",
+      "audioUrl": "audio/looking_at_the_fog.mp3", 
+      "searchTags": "looking at the fog original composition tabs sheet music",
+      "isFree": true,
+      "priceText": "0.00",
+      "buttonText": "Download PDF",
+      "link": "pdf_compositions/looking at the fog_tabs.pdf",
+      "imageUrl": "pdf_compositions/looking_at_the_fog_tabs_1st_page.jpg"
+    }
+  ]
+}

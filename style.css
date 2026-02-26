@@ -1,0 +1,1033 @@
+/* ==========================================================================
+   PANAGOS THEODOROS - CLASSICAL GUITAR PORTFOLIO (DARK & GOLD THEME)
+   ========================================================================== */
+
+/* --- VARIABLES & BASE --- */
+:root {
+    --bg: #111111;           /* Deep dark background */
+    --surface: #1e1e1e;      /* Slightly lighter dark for cards/sections */
+    --text: #f4f4f4;         /* Off-white text */
+    --text-muted: #a0a0a0;
+    --accent: #c9a050;       /* Gold/Mahogany accent */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --transition-slide: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    background: var(--bg); 
+    color: var(--text); 
+    font-family: var(--font-sans); 
+    -webkit-font-smoothing: antialiased; 
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+.text-center { text-align: center; }
+
+/* --- FLOATING PILL NAVBAR --- */
+.navbar {
+    position: fixed; 
+    top: 20px; 
+    width: 90%; 
+    left: 5%;
+    height: 80px; 
+    padding: 0 40px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 9999; 
+    background: rgba(25, 25, 25, 0.85) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    transition: transform 0.5s var(--transition-slide), height 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.navbar--hidden { transform: translateY(-150%); }
+
+.logo { 
+    font-weight: 600; 
+    letter-spacing: 3px; 
+    font-size: 0.9rem; 
+    text-transform: uppercase; 
+}
+
+.logo a, 
+.artist-name-link {
+    color: var(--accent) !important;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo a:hover { opacity: 0.7; }
+
+.nav-links { display: flex; align-items: center; }
+
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text); 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-left: 30px; 
+    transition: 0.3s; 
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.nav-socials { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-left: 30px; 
+}
+
+.nav-socials a { 
+    margin-left: 0; 
+    opacity: 0.8; 
+    font-size: 1rem; 
+    transition: 0.3s; 
+    color: var(--accent); 
+}
+
+.nav-socials a:hover { opacity: 1; text-shadow: 0 0 10px rgba(201, 160, 80, 0.5); }
+
+/* --- HERO SECTION --- */
+.guitar-hero {
+    height: 85vh;
+    background-image: url('images/hero-guitar.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: linear-gradient(to bottom, rgba(17,17,17,0.4) 0%, rgba(17,17,17,1) 100%);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.guitar-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 5.5rem;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.guitar-hero p {
+    font-family: var(--font-sans);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* --- GENERAL TYPOGRAPHY & LAYOUT LIMITS --- */
+.content-limit { max-width: 1200px; margin: 0 auto; }
+.content-limit-narrow { max-width: 800px; margin: 0 auto; }
+
+.section-main-title {
+    font-family: var(--font-sans);
+    font-size: 3.5rem; 
+    font-weight: 600; 
+    letter-spacing: -0.03em;
+    margin-bottom: 60px;
+    text-align: center;
+    color: var(--text);
+}
+
+.series-title { 
+    font-family: var(--font-serif); 
+    font-size: 4rem; 
+    margin-bottom: 0; 
+    border-bottom: none; 
+    font-style: italic; 
+    color: var(--accent);
+}
+
+.series-header { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-bottom: 1px solid rgba(255,255,255,0.05); 
+    padding-bottom: 40px; 
+    margin-bottom: 80px; 
+    text-align: center; 
+}
+
+/* --- ABOUT & CV SECTION --- */
+.about-section { 
+    padding: 120px 5%; 
+    text-align: center; 
+    background: var(--bg);
+    position: relative;
+    z-index: 1;
+}
+
+.about-manifesto {
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-muted);
+    letter-spacing: -0.01em;
+}
+
+.view-btn { 
+    color: var(--accent) !important; 
+    border-bottom: 1px solid rgba(201, 160, 80, 0.4); 
+    padding-bottom: 5px; 
+    font-size: 0.85rem; 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+    text-decoration: none;
+    transition: border-color 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.view-btn:hover {
+    border-bottom-color: var(--accent);
+    opacity: 0.8;
+}
+
+/* --- ELEGANT SEARCH BARS --- */
+.elegant-search {
+    max-width: 100%;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+.elegant-search input {
+    width: 100%;
+    padding: 20px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    outline: none;
+    font-size: 1.3rem;
+    color: var(--text);
+    font-family: var(--font-serif); 
+    font-style: italic;
+    transition: border-color 0.4s;
+    text-align: center;
+}
+
+.elegant-search input::placeholder { color: rgba(255,255,255,0.3); }
+.elegant-search input:focus { border-bottom: 1px solid var(--accent); }
+
+/* --- ELEGANT FILTERS --- */
+.elegant-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+    background: var(--accent);
+    color: #111;
+    border-color: var(--accent);
+    font-weight: 500;
+}
+
+/* --- VIDEOS GALLERY --- */
+.gallery-section { 
+    padding: 100px 5%; 
+    text-align: center; 
+    background: var(--bg);
+}
+
+.artwork-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 60px 30px; 
+    margin-top: 60px; 
+    text-align: center; 
+}
+
+.artwork-card { 
+    display: none; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.artwork-card.show {
+    display: flex;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.5s var(--transition-slide);
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.artwork-card:hover .video-wrapper { transform: translateY(-8px); border-color: rgba(201, 160, 80, 0.3); }
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+
+.artwork-caption { 
+    margin-top: 20px; 
+    min-height: 60px; 
+    text-align: center; 
+}
+
+.art-title { 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    color: var(--text);
+}
+
+.art-details { 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    margin-top: 5px; 
+}
+
+/* --- SCORES SECTION --- */
+.bio-section { 
+    padding: 100px 5%; 
+    background: var(--bg);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.score-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.score-card {
+    background: var(--surface);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.score-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(201, 160, 80, 0.3);
+}
+
+.score-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    cursor: pointer;
+}
+
+.score-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; 
+}
+
+.score-preview-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(17, 17, 17, 0.9);
+    padding: 8px 15px;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+}
+
+.score-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.score-info .score-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 5px;
+    color: var(--accent);
+}
+
+.score-info .score-type {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* --- AUDIO PLAYER UI --- */
+.audio-player {
+    margin-top: 20px;
+    background: rgba(0,0,0,0.3);
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.audio-play-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.audio-play-btn:hover { opacity: 0.7; }
+.audio-play-btn i { font-size: 1.5rem; }
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.time-current, .time-duration {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    min-width: 35px;
+    text-align: center;
+}
+
+.audio-progress {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.audio-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+}
+
+/* --- DOWNLOAD / BUY SECTION (RE-DESIGNED) --- */
+.score-buy-section {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 20px;
+    gap: 15px;
+}
+
+.price-badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    background: rgba(255,255,255,0.05);
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.price-badge.free {
+    background: rgba(201, 160, 80, 0.1);
+    color: var(--accent);
+}
+
+.action-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-radius: 8px; /* Distinct square-rounded shape */
+    border: 1px solid var(--accent);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text);
+}
+
+.action-btn i {
+    color: var(--accent);
+}
+
+.action-btn:hover {
+    background: var(--accent);
+    color: #111;
+}
+
+.action-btn:hover i {
+    color: #111;
+}
+
+/* --- CONTACT & FOOTER --- */
+.footer { 
+    padding: 100px 5%; 
+    text-align: center; 
+    background: var(--bg); 
+    border-top: 1px solid rgba(255,255,255,0.05); 
+}
+
+.contact-section { max-width: 800px; margin: 0 auto; }
+
+.input-group { margin-bottom: 35px; text-align: left; }
+
+.input-group input, 
+.input-group textarea { 
+    width: 100%; 
+    padding: 20px 0; 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important; 
+    outline: none; 
+    font-size: 1.1rem; 
+    color: var(--text); 
+    font-family: var(--font-sans); 
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-bottom-color: var(--accent) !important;
+}
+
+.submit-btn { 
+    background: var(--accent); 
+    color: #111; 
+    border: 1px solid var(--accent); 
+    padding: 20px; 
+    width: 100%; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.4s; 
+    display: inline-block;
+    text-decoration: none;
+}
+
+.submit-btn:hover { 
+    background: transparent; 
+    color: var(--accent); 
+}
+
+.copyright { 
+    margin-top: 100px; 
+    font-size: 0.7rem; 
+    color: var(--text-muted); 
+    letter-spacing: 2px; 
+    text-transform: uppercase; 
+}
+
+/* --- UTILS --- */
+.fade-up { 
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: 1s var(--transition-slide); 
+}
+
+.fade-up.visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.delay-1 { transition-delay: 0.2s; }
+
+/* --- CV PREVIEW IMAGE --- */
+.cv-preview-image {
+    width: 100%;
+    max-width: 450px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5); 
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s;
+    cursor: pointer; 
+}
+
+.cv-preview-image:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    border-color: rgba(201, 160, 80, 0.4);
+}
+
+.about-cv-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 80px;
+    align-items: center;
+}
+
+/* --- FULL SCREEN CV MODAL --- */
+.cv-modal {
+    display: none; 
+    position: fixed;
+    z-index: 100000; 
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(17, 17, 17, 0.95); 
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    border-radius: 8px;
+    animation: zoomIn 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.95); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: var(--text-muted);
+    font-size: 45px;
+    font-weight: 300;
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: var(--font-sans);
+}
+
+.close-modal:hover { color: var(--accent); transform: scale(1.1); }
+
+/* --- RESPONSIVE ADAPTIVE MEDIA QUERIES --- */
+
+/* Tablets / Small Desktops */
+@media (max-width: 1024px) { 
+    .artwork-grid, .score-grid { grid-template-columns: repeat(2, 1fr); }
+    .guitar-hero h1 { font-size: 4.5rem; }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) { 
+    .navbar { 
+        width: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        height: 80px; 
+        padding: 0 20px;
+        flex-direction: row; 
+        justify-content: space-between; 
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .guitar-hero h1 { font-size: 3.5rem; }
+    .guitar-hero p { font-size: 0.8rem; }
+
+    .logo { font-size: 0.75rem; letter-spacing: 1px; }
+
+    .nav-links > .menu-items,
+    .nav-links > a { display: none; }
+
+    .nav-socials { margin-left: 10px; gap: 12px; }
+    .nav-socials a { font-size: 0.9rem; }
+
+    .section-main-title { font-size: 2.2rem; margin-bottom: 40px; }
+    .series-header { flex-direction: column; align-items: center; gap: 20px; }
+    .series-title { font-size: 2.8rem !important; }
+
+    /* MOBILE GRIDS */
+    .artwork-grid { 
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 25px 15px; 
+    }
+    .score-grid {
+        grid-template-columns: 1fr; /* Stack scores on mobile */
+        gap: 25px;
+    }
+
+    .artwork-grid .art-title { font-size: 0.75rem; letter-spacing: 0px; }
+    .artwork-grid .art-details { font-size: 0.7rem; }
+
+    .about-cv-layout { grid-template-columns: 1fr; gap: 50px; }
+    
+    .about-column .section-main-title,
+    .about-column .about-manifesto { text-align: center !important; }
+    
+    .about-column { display: flex; flex-direction: column; align-items: center; }
+    .about-manifesto { font-size: 1.3rem; }
+    
+    .score-buy-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .action-btn { justify-content: center; }
+}
+
+/* --- HAMBURGER MENU STYLES --- */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.mobile-menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle { display: flex; }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 100%;
+        height: 100vh;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s var(--transition-slide);
+        z-index: 10000;
+        margin: 0;
+    }
+
+    .nav-links.active { right: 0; }
+    .nav-links.active > .menu-items { display: flex; }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .nav-links a { margin-left: 0; font-size: 1.5rem; }
+    .nav-socials { margin-left: 0; gap: 25px; }
+    .nav-socials a { font-size: 1.5rem; }
+
+    .mobile-menu-toggle.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .mobile-menu-toggle.active .bar:nth-child(2) { transform: translateY(-9px) rotate(-45deg); }
+}
+
+
+
+
+
+
+
+
+
+/* --- ULTRA IMPRESSIVE HERO SECTION --- */
+.guitar-hero {
+    height: 100vh; /* Full screen height for maximum impact */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Keeps the zooming background contained */
+}
+
+/* The Ken Burns Zooming Background */
+.hero-bg-zoom {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('images/hero-guitar.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    animation: bgZoom 20s infinite alternate linear;
+}
+
+.hero-overlay {
+    background: linear-gradient(to bottom, rgba(17,17,17,0.6) 0%, rgba(17,17,17,0.9) 100%);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    z-index: 1;
+}
+
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    max-width: 900px;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Massive Title with Shimmer Sweep Effect */
+.hero-title {
+    font-family: var(--font-serif);
+    font-size: 6.5rem; /* Bigger! */
+    font-style: italic;
+    margin-bottom: 15px;
+    
+    /* The Sweep Effect */
+    background: linear-gradient(90deg, #fff 0%, #c9a050 50%, #fff 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmerSweep 4s linear infinite;
+}
+
+/* Animated Expanding Divider */
+.animated-divider {
+    height: 2px;
+    background: var(--accent);
+    margin: 20px 0 35px 0;
+    box-shadow: 0 0 15px rgba(201, 160, 80, 0.5);
+    animation: expandLine 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.5s;
+    width: 0; /* Starts at 0, animated to 150px */
+}
+
+/* Roles */
+.hero-roles {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-roles .role {
+    font-family: var(--font-sans);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero-roles .dot {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+/* Bigger, Bolder Description */
+.hero-description {
+    font-family: var(--font-sans);
+    font-size: 1.4rem; /* Much bigger */
+    line-height: 1.9;
+    color: #cccccc;
+    font-weight: 300;
+}
+
+/* Bouncing Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.3s;
+    animation: floatBounce 2s infinite ease-in-out;
+    z-index: 3;
+}
+
+.scroll-indicator:hover {
+    color: var(--accent);
+}
+
+.scroll-text {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.scroll-indicator i {
+    font-size: 1.5rem;
+}
+
+/* --- KEYFRAME ANIMATIONS (THE MAGIC) --- */
+
+/* Slow Background Zoom */
+@keyframes bgZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+
+/* Sweeping Light across the text */
+@keyframes shimmerSweep {
+    to { background-position: 200% center; }
+}
+
+/* Expanding Gold Line */
+@keyframes expandLine {
+    0% { width: 0; opacity: 0; }
+    100% { width: 150px; opacity: 1; }
+}
+
+/* Floating Elements Entrance */
+.fade-in-up {
+    opacity: 0;
+    animation: floatUpAnim 1s ease-out forwards;
+}
+
+.float-up-1 { opacity: 0; animation: floatUpAnim 1s ease-out forwards; animation-delay: 0.8s; }
+.float-up-2 { opacity: 0; animation: floatUpAnim 1s ease-out forwards; animation-delay: 1.0s; }
+.float-up-3 { opacity: 0; animation: floatUpAnim 1s ease-out forwards; animation-delay: 1.2s; }
+.float-up-4 { opacity: 0; animation: floatUpAnim 1s ease-out forwards; animation-delay: 1.5s; }
+
+@keyframes floatUpAnim {
+    0% { transform: translateY(30px); opacity: 0; filter: blur(5px); }
+    100% { transform: translateY(0); opacity: 1; filter: blur(0); }
+}
+
+/* Bouncing Arrow */
+@keyframes floatBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+}
+
+/* Mobile Adjustments for this massive hero */
+@media (max-width: 768px) {
+    .hero-title { font-size: 4rem; }
+    .hero-subtitle { font-size: 0.8rem; letter-spacing: 3px; }
+    .hero-roles .role { font-size: 0.9rem; letter-spacing: 2px; }
+    .hero-description { font-size: 1.1rem; padding: 0 10px; }
+    .scroll-indicator { bottom: 20px; }
+}
+

@@ -1,0 +1,13 @@
+Feature Implementation Roadmap
+Order	Feature	UX Value	Dev Complexity	Why it's a Portfolio Win
+1	Formspree Contact	Essential utility.	★☆☆☆☆	Shows you can handle backend API integration.
+2	Scroll Progress Bar	Visual feedback.	★☆☆☆☆	Demonstrates clean micro-interactions.
+3	Micro-Interaction Cursors	Luxury, premium feel.	★★☆☆☆	Shows attention to detail and CSS/JS mouse events.
+4	Multi-Language (GR/EN)	Global accessibility.	★★☆☆☆	Proves you can manage state and data mapping.
+5	Video "Theater Mode"	Cinematic immersion.	★★★☆☆	Demonstrates UI state management and overlay logic.
+6	"Now Playing" Footer	UX continuity.	★★★☆☆	Proves you can handle global state across sections.
+7	Audio Waveforms	High-tech visual.	★★★★☆	Shows mastery of the Web Audio API and Canvas.
+8	"Site Tour" Onboarding	User guidance.	★★★★☆	Shows you think about the "First Time User" experience.
+9	Chord/Harmony Wheel	Composition utility.	★★★★☆	Shows deep logic and complex SVG synchronization.
+10	Tab-to-Sheet Converter	"Magic" education.	★★★★★	Extreme logic test; shows data format translation.
+11	Note ID Game	Fun & addictive.	★★★★★	Demonstrates Game Loop logic and state tracking.

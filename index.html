@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panagos Theodoros | Classical Guitarist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="main-nav">
+        <div class="logo">
+            <a href="index.html" class="artist-name-link">PANAGOS THEODOROS</a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Open Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-links">
+            <div class="menu-items">
+                <a href="#about-cv">About</a>
+                <a href="#videos">Performances</a>
+                <a href="#scores">Scores</a>
+                <a href="#teacher">Teaching</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="nav-socials">
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtube.com/@panagosthodorisclassicalgu5338?si=xGyK79uVjTfkNwrh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="guitar-hero">
+            <div class="hero-bg-zoom"></div>
+            
+            <div class="hero-overlay">
+                <div class="hero-content-wrapper">
+                    <h2 class="hero-subtitle fade-in-up">Welcome to the Music Portfolio of</h2>
+                    
+                    <h1 class="hero-title shimmer-text">Panagos Theodoros</h1>
+                    
+                    <div class="animated-divider"></div>
+                    
+                    <div class="hero-roles">
+                        <span class="role float-up-1">Classical Guitarist</span>
+                        <span class="dot float-up-1">•</span>
+                        <span class="role float-up-2">Composer</span>
+                        <span class="dot float-up-2">•</span>
+                        <span class="role float-up-3">Instructor</span>
+                    </div>
+                    
+                <p class="hero-description float-up-4">
+                        Welcome to my musical home. Here you can watch my performances, download my original sheet music, and book classical guitar lessons.
+                    </p>
+                </div>
+
+                <a href="#about-cv" class="scroll-indicator">
+                    <span class="scroll-text">Discover</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about-cv" class="about-section">
+            <div class="content-limit about-cv-layout">
+                
+                <div class="cv-column fade-up">
+                    <img src="images/cv-classical-guitar.jpg" alt="Panagos Theodoros Curriculum Vitae" class="cv-preview-image" id="cv-thumbnail" title="Click to view full screen">
+                </div>
+
+                <div class="about-column text-left">
+                    <h2 class="fade-up section-main-title" style="text-align: left; margin-bottom: 30px;">About</h2>
+                    <p class="fade-up delay-1 about-manifesto" style="text-align: left;">
+                        “I am a classical guitarist dedicated to the performance, composition, and teaching of classical repertoire. Through my performances and compositions, I aim to bridge traditional classical techniques with expressive, contemporary interpretations. For me, playing the guitar should feel like painting with sound.”
+                    </p>
+                    <div class="fade-up delay-1" style="margin-top: 40px;">
+                        <a href="images/cv-classical-guitar.jpg" download="Panagos_Theodoros_CV.jpg" class="view-btn cv-link">
+                            <i class="fa-solid fa-download" style="margin-right: 8px;"></i> Download Curriculum Vitae
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="image-modal" class="cv-modal">
+            <span class="close-modal" id="close-image-modal">&times;</span>
+            <img class="modal-content" id="full-modal-img" src="" alt="Expanded Preview">
+        </div>
+
+        <section id="videos" class="gallery-section">
+            <div class="content-limit">
+                <div class="series-header fade-up">
+                    <h2 class="series-title" style="font-size: 3.5rem;">Performances</h2>
+                </div>
+
+                <div class="elegant-search fade-up">
+                    <input type="text" id="video-search" placeholder="Search performances by title or composer...">
+                </div>
+
+                <div class="elegant-filters fade-up" id="video-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Original Composition">Compositions</button>
+                    <button class="filter-btn" data-filter="Classical guitar cover">Covers</button>
+                </div>
+                
+                <div class="artwork-grid" id="video-grid"></div>
+
+                <div class="fade-up" style="margin-top: 80px; text-align: center;" id="load-more-container">
+                    <button id="load-more-btn" class="view-btn" style="background: transparent; cursor: pointer; padding: 5px 10px; font-family: inherit; border-top: none; border-left: none; border-right: none;">Load More</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="scores" class="bio-section">
+            <div class="content-limit">
+                <div class="series-header fade-up" style="border-bottom: none; margin-bottom: 20px;">
+                    <h2 class="series-title" style="font-size: 3.5rem;">Guitar Scores</h2>
+                </div>
+
+                <div class="elegant-search fade-up" style="max-width: 800px; margin-bottom: 60px;">
+                    <input type="text" id="score-search" placeholder="Search original compositions & transcriptions...">
+                </div>
+
+                <div class="score-grid" id="score-grid"></div>
+            </div>
+        </section>
+
+        <section id="teacher" class="about-section">
+            <div class="content-limit-narrow">
+                <h2 class="fade-up section-main-title">Teaching</h2>
+                <p class="fade-up delay-1 about-manifesto" style="font-size: 1.4rem; margin-bottom: 40px;">
+                    Whether you are a beginner taking your first steps or an advanced player looking to refine your technique and musicality, I offer tailored one-on-one classical guitar lessons—focusing on posture, repertoire interpretation, and tone production.
+                </p>
+                <div class="fade-up delay-1 text-center">
+                    <a href="#contact" class="submit-btn" style="display: inline-block; max-width: 300px; text-decoration: none;">Book a Trial Lesson</a>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="footer">
+            <div class="content-limit contact-section">
+                <h2 class="fade-up section-main-title">Contact</h2>
+              <form id="contact-form" class="contact-form-container fade-up delay-1">
+    <div class="input-group">
+        <input type="text" name="name" id="user-name" placeholder="Name" required>
+    </div>
+    <div class="input-group">
+        <input type="email" name="email" id="user-email" placeholder="Email" required>
+    </div>
+    <div class="input-group">
+        <textarea name="message" id="user-message" rows="5" placeholder="Message" required></textarea>
+    </div>
+    <button type="submit" id="send-btn" class="submit-btn">Send Message</button>
+</form>
+                <p class="copyright">© 2026 Panagos Theodoros</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
