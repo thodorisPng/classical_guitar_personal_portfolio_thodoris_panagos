@@ -2,7 +2,27 @@
    PANAGOS THEODOROS - CLASSICAL GUITAR PORTFOLIO (COMPLETE LOGIC)
    ========================================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+
+// 1. KILL NATIVE SCROLL RESTORATION (Prevents Instagram browser from remembering scroll)
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+// 2. CLEAR HIDDEN HASHES (If the URL accidentally has #videos attached to it)
+if (window.location.hash) {
+    window.history.replaceState(null, null, window.location.pathname);
+}
+
+// 3. AGGRESSIVE FORCE-TOP AFTER FULL LOAD (Beats the dynamic JSON loading jump)
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 50); // Small delay guarantees the browser respects the command
+});
+
+
+
+   document.addEventListener("DOMContentLoaded", () => {
     
     // Global State Variables
     let currentAudio = null;
