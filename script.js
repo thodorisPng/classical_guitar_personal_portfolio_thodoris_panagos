@@ -3,23 +3,22 @@
    ========================================================================== */
 
 
-// 1. KILL NATIVE SCROLL RESTORATION (Prevents Instagram browser from remembering scroll)
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
+// 1. Temporarily kill the CSS "smooth" scrolling so the jump to top is INVISIBLE
+document.documentElement.style.scrollBehavior = 'auto';
 
-// 2. CLEAR HIDDEN HASHES (If the URL accidentally has #videos attached to it)
-if (window.location.hash) {
-    window.history.replaceState(null, null, window.location.pathname);
-}
+// 2. Lock the scroll to the top instantly on load
+window.scrollTo(0, 0);
 
-// 3. AGGRESSIVE FORCE-TOP AFTER FULL LOAD (Beats the dynamic JSON loading jump)
+// 3. Wait for the videos to load, snap to top one last time, then turn smooth scrolling back on
 window.addEventListener('load', () => {
+    // Snap to top instantly (no smooth animation)
+    window.scrollTo(0, 0);
+    
+    // Give it 50ms, then safely turn smooth scrolling back on for your navbar links
     setTimeout(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 50); // Small delay guarantees the browser respects the command
+        document.documentElement.style.scrollBehavior = 'smooth';
+    }, 50);
 });
-
 
 
    document.addEventListener("DOMContentLoaded", () => {

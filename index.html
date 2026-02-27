@@ -11,6 +11,21 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+
+<script>
+        // Stop browser from remembering scroll position instantly
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        // Clear any hidden #links from Instagram instantly
+        if (window.location.hash) {
+            window.history.replaceState(null, null, window.location.pathname);
+        }
+        window.scrollTo(0, 0);
+    </script>
+
+
 </head>
 <body>
 
